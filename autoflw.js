@@ -6,23 +6,12 @@ function autoflw() {
 	var idx = 0;
 	
 	intervallo = setInterval(function () {
-		giaSeguito = true;	//Setto preventivamente a true, così se non lo fosse, lo modifico dopo, altrimenti mi balzo il timer
+	var bottoneFlw = containerFollowers.getElementsByTagName("button")[idx];
+		giaSeguito = true;
 		
 		while(giaSeguito)
 		{
-			//Ottengo il bottone all'indice idx
-			var bottoneFlw = containerFollowers.getElementsByTagName("button")[idx];
-			
-			var isFollowed = false
-			isFollowed |= (bottoneFlw.innerText.indexOf("gi") >= 0);	//Già seguito in italiano
-			isFollowed |= (bottoneFlw.innerText.indexOf("eff") >= 0);	//Richiesta effettuata in italiano
-			isFollowed |= (bottoneFlw.innerText.indexOf("ing") >= 0);	//Già seguito in inglese
-			isFollowed |= (bottoneFlw.innerText.indexOf("ted") >= 0);	//Richiesta effettuata in inglese
-			
-			/** Sentitevi liberi di aggiungere condizioni al vostro codice, soprattutto se non siete italiani o inglesi **/
-			/** Feel free to add conditions to your code, especially if you're not english or italian **/
-			
-			if(!(isFollowed)) {
+			if(!(bottoneFlw.innerText.indexOf("gi") >= 0 || bottoneFlw.innerText.indexOf("eff") >= 0)) {
 				//Click sul bottone se non seguo già o non ho effettuato la richiesta
 				bottoneFlw.click();	
 				console.log("Seguo...");
@@ -36,10 +25,10 @@ function autoflw() {
 			idx++;
 			
 			if(idx % 10 == 0) {
-				//Ogni 10 profili analizzati scrollo
+				//Ogni 10 follow scrollo
 				containerFollowers.scrollTop += 2000
 				giaSeguito = false;
 			}
 		}
-	}, 120 * 1000);
+	}, 10 * 1000);
 }
