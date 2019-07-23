@@ -6,13 +6,13 @@ function autoflw() {
 	var idx = 0;
 	
 	intervallo = setInterval(function () {
-		
-		//Ottengo il bottone all'indice idx
-		var bottoneFlw = containerFollowers.getElementsByTagName("button")[idx];
 		giaSeguito = true;	//Setto preventivamente a true, così se non lo fosse, lo modifico dopo, altrimenti mi balzo il timer
 		
 		while(giaSeguito)
 		{
+			//Ottengo il bottone all'indice idx
+			var bottoneFlw = containerFollowers.getElementsByTagName("button")[idx];
+			
 			var isFollowed = false
 			isFollowed |= (bottoneFlw.innerText.indexOf("gi") >= 0);	//Già seguito in italiano
 			isFollowed |= (bottoneFlw.innerText.indexOf("eff") >= 0);	//Richiesta effettuata in italiano
