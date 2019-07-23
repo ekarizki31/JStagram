@@ -1,0 +1,30 @@
+README IT
+
+* Guida al funzionamento:
+1. Accedere al proprio instagram da browser
+2. Posizionarsi su una pagina con molti follower da usare come fonte (meglio una pagina che abbia qualcosa in comune col profilo di cui far crescere i follower)
+3. Aprire la lista dei follower della pagina (click sul numero dei follower)
+4. Aprire la modalità dev del browser (F12)
+5. Andare nella sezione "Console"
+6. Incollare il codice che si trova nel file "autoflw.js"
+7. Premere INVIO
+8. Scrivere nella console la stringa "autoflw()" e premere ancora INVIO
+
+L'auto-follower seguirà una persona ogni 2 minuti, in modo da rimanere nei limiti di instagram.
+Skipperà automaticamente le persone che segui già o quelle a cui hai inviato già una richiesta.
+
+______________________________________________________________________________________________________________________
+README EN
+
+* User guide
+1. Log in into your instagram profile by browser
+2. Navigate to a page with many followers, in order to use it as source (better a page with something in common with the profile you want to grow)
+3. Open the followers list of the page (click on the followers number)
+4. Open dev tools windows (press F12)
+5. Navigate to the "Console" tab
+6. Paste the code you find in the the file "autoflw.js"
+7. Press RETURN
+8. Write into the console the string "autoflw()" and press RETURN again.
+
+The auto-follower will follow a person each 2 minutes, in order to stay into instagram limits.
+It will automatically skip people who you are already following or you sent request to.
