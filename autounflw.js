@@ -1,11 +1,15 @@
 var intervallo = 0;
+var idx = 200;
 
-function autoflw() {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function autounflw() {
 	//Ottengo il container dei followers
 	var containerFollowers = document.getElementsByClassName("isgrP")[0];
-	var idx = 0;
 	
-	intervallo = setInterval(function () {
+	intervallo = setInterval(async function () {
 		giaSeguito = true;	//Setto preventivamente a true, così se non lo fosse, lo modifico dopo, altrimenti mi balzo il timer
 		
 		while(giaSeguito)
@@ -22,15 +26,18 @@ function autoflw() {
 			/** Sentitevi liberi di aggiungere condizioni al vostro codice, soprattutto se non siete italiani o inglesi **/
 			/** Feel free to add conditions to your code, especially if you're not english or italian **/
 			
-			if(!(isFollowed)) {
+			if(isFollowed) {
 				//Click sul bottone se non seguo già o non ho effettuato la richiesta
 				bottoneFlw.click();	
-				console.log("Seguo...");
+				await sleep(500);
+				var dialog = document.getElementsByClassName("piCib")[0];
+				dialog.getElementsByTagName("button")[0].click();
+				console.log("Smetto di seguire...");
 				giaSeguito = false;
 			}
 			
 			else {
-				console.log("Già seguto. Skippo...");
+				console.log("Già smesso di seguire. Skippo...");
 			}
 			
 			idx++;
