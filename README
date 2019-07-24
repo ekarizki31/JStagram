@@ -14,6 +14,12 @@ README IT
 L'auto-follower seguirà una persona ogni 2 minuti, in modo da rimanere nei limiti di instagram.
 Skipperà automaticamente le persone che segui già o quelle a cui hai inviato già una richiesta.
 
+Update 24/07/2019
+* Auto-Unfollower
+Il funzionamento è simile a quello dell'autofollower, l'unica differenza è che è necessario aprire la lista dei propri seguiti.
+Vi è poi una variabile "idx", che identifica numericamente il follower dal quale cominciare l'autounfollow 
+(i seguiti sono ordinati cronologicamente).
+
 ______________________________________________________________________________________________________________________
 README EN
 
@@ -30,3 +36,9 @@ README EN
 
 The auto-follower will follow a person each 2 minutes, in order to stay into instagram limits.
 It will automatically skip people who you are already following or you sent request to.
+
+Update 24/07/2019
+* Auto-Unfollower
+The behaviour is similar to the autofollower, the only difference is that you have to open your followed list.
+There is, moreover, a variable called "idx", that numerically identifies the follower you want to start the autounfollow from
+(the follower are chronologically sorted).
