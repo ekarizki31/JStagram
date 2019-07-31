@@ -1,4 +1,5 @@
 var intervallo = 0;
+var numSecondiAttesa = 120; //2 Min di Default
 
 function autoflw() {
 	//Ottengo il container dei followers
@@ -41,5 +42,5 @@ function autoflw() {
 				giaSeguito = false;
 			}
 		}
-	}, 5 * 1000);
+	}, numSecondiAttesa * 1000);
 }

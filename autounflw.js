@@ -1,5 +1,6 @@
 var intervallo = 0;
 var idx = 200;
+var numSecondiAttesa = 120;	//2 min di default
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -48,5 +49,5 @@ async function autounflw() {
 				giaSeguito = false;
 			}
 		}
-	}, 5 * 1000);
+	}, numSecondiAttesa * 1000);
 }
