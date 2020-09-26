@@ -1,5 +1,5 @@
 var intervallo = 0;
-var numSecondiAttesa = 120; //2 Min di Default
+var numSecondiAttesa = 180; //2 Min di Default
 
 function autoflw() {
 	//Ottengo il container dei followers
@@ -38,9 +38,10 @@ function autoflw() {
 			
 			if(idx % 10 == 0) {
 				//Ogni 10 profili analizzati scrollo
-				containerFollowers.scrollTop += 2000
+				containerFollowers.scrollTop += 1500
 				giaSeguito = false;
 			}
 		}
-	}, numSecondiAttesa * 1000);
+	}, numSecondiAttesa * 1500);
+	//this is my change
 }
